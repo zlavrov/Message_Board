@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "f8e28d87-6949-45a3-93e6-1c64894c5c75",
+		"name": "Message_Board",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23608773",
+		"_collection_link": "https://dark-escape-389339.postman.co/workspace/Message~ef364159-fb9c-4bdf-bf49-d29cbdedf423/collection/23608773-f8e28d87-6949-45a3-93e6-1c64894c5c75?action=share&creator=23608773&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "CreateMessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Full Name\",\n    \"content\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate rem ipsam aliquid labore consequatur odio, quod quo beatae corrupti nobis neque quae commodi laborum quam blanditiis tempore ex vel quisquam.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/message/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"message",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMessage",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Apple\",\n    \"content\": \"Pear\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/message/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"message",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMessageById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/message/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"message",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMessageList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/message/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"message",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMessage",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/message/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"message",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
